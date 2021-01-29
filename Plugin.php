@@ -5,6 +5,7 @@
  * @package     Sitemap 
  * @author      caixw，小码农<https://djc8.cn>
  * @link        https://djc8.cn
+ * @version     1.0.1
  * @copyright   Copyright (C) 2010, https://djc8.cn
  */
 class Sitemap_Plugin implements Typecho_Plugin_Interface

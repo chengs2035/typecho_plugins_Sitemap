@@ -143,7 +143,9 @@ class Sitemap_Plugin implements Typecho_Plugin_Interface
 
 			$type = $p['type'];
             $routeExists = (NULL != Typecho_Router::get($type));
-            $pathinfo = $routeExists ? Typecho_Router::url($type, $p) : '#';
+
+            $pathinfo = $routeExists ? Typecho_Router::url($type, $p) : false;
+            if(!$pathinfo)continue;
             $permalink = Typecho_Common::url($pathinfo, $options->index);
             $priority = $config->postPriority / 10;
             $sm->add($permalink, $config->postChgfreq, $priority, $p['modified']);
